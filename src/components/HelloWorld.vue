@@ -6,7 +6,7 @@ defineProps<{ msg: string }>()
 const count = ref(0)
 </script>
 
-<template data-theme="mytheme">
+<template>
   <div class="navbar bg-primary">
     <div class="navbar-start">
       <div class="dropdown">

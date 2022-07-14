@@ -4,8 +4,8 @@
 import HelloWorld from './components/HelloWorld.vue';
 </script>
 
-<template data-theme="mytheme">
-  <HelloWorld data-theme="mytheme" msg="Hello Vue 3 + TypeScript + Vite" />
+<template>
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
 <style>
