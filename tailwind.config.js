@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{vue,js,ts}'],
+  content: ["./src/**/*.{vue,js,ts}"],
   daisyui: {
-    themes:  [
+    themes: [
       {
-        mytheme: {
+        main_theme: {
           primary: "#283593",
           secondary: "#3949ab",
           accent: "#c1c8df",
@@ -19,7 +19,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    require('daisyui'),
-  ],
-}
+  plugins: [require("daisyui")],
+};
