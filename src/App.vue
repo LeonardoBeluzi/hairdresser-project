@@ -1,11 +1,19 @@
-<script setup lang="ts">
-import Home from "./views/Home.vue";
+<script lang="ts">
+import './app.css'
+import TopNavigationBar from '../src/components/TopNavigationBar.vue'
+import { defineComponent } from 'vue'
+export default {
+  name: 'App',
+  components: {
+    TopNavigationBar
+  }
+}
+import vue from 'vue'
 </script>
 
 <template data-theme="main_theme">
   <div id="app">
-    <Home msg="Hello Vue 3 + TypeScript + Vite" />
-    <router-view></router-view>
+    <TopNavigationBar></TopNavigationBar>
   </div>
 </template>
 
