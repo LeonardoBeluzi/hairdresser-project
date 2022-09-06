@@ -1,7 +1,8 @@
 <script lang="ts">
 import './app.css'
-import TopNavigationBar from '../src/components/TopNavigationBar.vue'
+import TopNavigationBar from './components/navigation/TopNavigationBar.vue'
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
   name: 'App',
   components: {
@@ -15,10 +16,11 @@ import vue from 'vue'
   <div id="app">
     <TopNavigationBar></TopNavigationBar>
   </div>
+  <router-view />
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 </style>
