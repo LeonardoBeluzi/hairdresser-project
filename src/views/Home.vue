@@ -1,13 +1,10 @@
 <script lang="ts">
-import { defineComponent } from "vue";
-import TopNavigationBar from "../components/navigation/TopNavigationBar.vue";
+import { defineComponent } from 'vue'
 export default defineComponent({
-  components: { TopNavigationBar },
-});
+  components: {}
+})
 </script>
 
-<template>
-  <TopNavigationBar />
-</template>
+<template></template>
 
 <style></style>
