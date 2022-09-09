@@ -18,9 +18,3 @@ import vue from 'vue'
   </div>
   <router-view />
 </template>
-
-<style>
-#app {
-  font-family: Helvetica, Arial, sans-serif;
-}
-</style>
