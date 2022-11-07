@@ -12,7 +12,7 @@ import { useRouter } from 'vue-router'
     <input
       type="text"
       placeholder="Nome do Cliente"
-      class="input input-lg input-bordered w-full max-w-xs"
+      class="input input-lg input-bordered input-primary w-full max-w-xs"
     />
   </div>
 
@@ -23,7 +23,7 @@ import { useRouter } from 'vue-router'
     <input
       type="text"
       placeholder="Endereço"
-      class="input input-lg input-bordered w-full max-w-xs"
+      class="input input-lg input-bordered input-primary w-full max-w-xs"
     />
   </div>
 
@@ -34,7 +34,7 @@ import { useRouter } from 'vue-router'
     <input
       type="text"
       placeholder="Número de Telefone"
-      class="input input-lg input-bordered w-full max-w-xs"
+      class="input input-lg input-bordered input-primary w-full max-w-xs"
     />
   </div>
 </template>
