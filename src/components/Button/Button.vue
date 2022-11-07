@@ -5,5 +5,5 @@ import { useRouter } from 'vue-router'
 </script>
 
 <template>
-  <button class="btn btn-primary w-28 my-8">Cadastrar</button>
+  <button class="btn btn-primary w-full max-w-xs my-8">Cadastrar</button>
 </template>
