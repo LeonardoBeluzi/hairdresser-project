@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { defineComponent } from 'vue'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { defineComponent } from "vue";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 </script>
 
 <template>
-  <div class="form-control w-full max-w-xs py-6">
-    <label class="label">
-
-    </label>
+  <div class="form-control w-full max-w-xs py-4 mt-8">
+    <label class="label"> </label>
     <input
       type="text"
       placeholder="Nome do Cliente"
@@ -16,10 +14,8 @@ import { useRouter } from 'vue-router'
     />
   </div>
 
-  <div class="form-control w-full max-w-xs py-6">
-    <label class="label">
-
-    </label>
+  <div class="form-control w-full max-w-xs py-4">
+    <label class="label"> </label>
     <input
       type="text"
       placeholder="Endereço"
@@ -27,10 +23,8 @@ import { useRouter } from 'vue-router'
     />
   </div>
 
-  <div class="form-control w-full max-w-xs py-6">
-    <label class="label">
-
-    </label>
+  <div class="form-control w-full max-w-xs py-4">
+    <label class="label"> </label>
     <input
       type="text"
       placeholder="Número de Telefone"

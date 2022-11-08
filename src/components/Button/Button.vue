@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { defineComponent } from 'vue'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { defineComponent } from "vue";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 </script>
 
 <template>
