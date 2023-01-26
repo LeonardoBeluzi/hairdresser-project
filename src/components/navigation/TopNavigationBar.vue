@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { defineComponent } from 'vue'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 </script>
 
@@ -44,26 +41,28 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
             >
               <div class="py-1">
                 <MenuItem v-slot="{ active }">
-                  <router-link
+                  <a
                     :class="[
                       active ? 'bg-accent text-gray-900' : 'text-gray-700',
                       'block px-4 py-2 text-sm'
                     ]"
-                    to="/"
-                    tag="button"
-                    >Home</router-link
+                    href="/"
+                    type="button"
                   >
+                    Home
+                  </a>
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
-                  <router-link
+                  <a
                     :class="[
                       active ? 'bg-accent text-gray-900' : 'text-gray-700',
                       'block px-4 py-2 text-sm'
                     ]"
-                    to="/ClientRegister"
-                    tag="button"
-                    >Cadastro</router-link
+                    href="/ClientRegister"
+                    type="button"
                   >
+                    Cadastro
+                  </a>
                 </MenuItem>
               </div>
             </MenuItems>
@@ -72,7 +71,9 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-primary normal-case text-xl">Agenda</a>
+      <a class="btn btn-primary normal-case text-xl"
+         href="/" type="button">Agenda</a
+      >
     </div>
     <div class="navbar-end"></div>
   </div>
