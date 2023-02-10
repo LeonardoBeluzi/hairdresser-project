@@ -6,10 +6,12 @@ import { useRouter } from 'vue-router'
 export default {
   name: 'App',
   components: {
-    TopNavigationBar
-  }
+    TopNavigationBar,
+    Calendar
+}
 }
 import vue from 'vue'
+import Calendar from './components/calendar/Calendar.vue'
 </script>
 
 <template data-theme="main_theme">
