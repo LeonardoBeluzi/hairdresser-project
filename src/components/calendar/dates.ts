@@ -28,3 +28,20 @@ const weekDays = {
         "long": ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
     }
 };
+
+const fullMonth = (month: number, year: number, firstDayOfTheWeek: WeekFirstDay): MonthInfo[] => {
+    const fullArray = new Array();
+
+    const nameOfMonth = monthName(month); 
+    const viewYear: CalendarYear = {
+        year: year,
+    };
+    const viewMonth: CalendarMonth = {
+        ...viewYear,
+        month: nameOfMonth,
+    };
+    
+    return fullArray;
+};
+
+export { fullMonth, weekDays, monthsYear, type WeekFirstDay, type Month };
