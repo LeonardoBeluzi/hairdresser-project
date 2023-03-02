@@ -32,7 +32,7 @@ const weekDays = {
 const fullMonth = (month: number, year: number, firstDayOfTheWeek: WeekFirstDay): MonthInfo[] => {
     const fullArray = new Array();
 
-    const nameOfMonth = monthName(month); 
+    const nameOfMonth = monthName(month);
     const viewYear: CalendarYear = {
         year: year,
     };
@@ -40,7 +40,26 @@ const fullMonth = (month: number, year: number, firstDayOfTheWeek: WeekFirstDay)
         ...viewYear,
         month: nameOfMonth,
     };
-    
+
+    const firstWeekDayInMonth = dayOfWeek({ ...viewMonth, day: 1 });
+    const countDaysInPrevMonth = numberOfDaysInMonth({ year: month === 1 ? year - 1 : year, month: monthName(month - 1) });
+    const daysOfPrevMonth = weekDays[firstDayOfTheWeek].short.indexOf(firstWeekDayInMonth);
+
+    for (let i = 0; i < daysOfPrevMonth; i += 1) {
+        const date = countDaysInPrevMonth + (i + 1) - daysOfPrevMonth;
+        const day = weekDays[firstDayOfTheWeek].short[i];
+        const mnth = monthName(month - 1);
+        const yr = month === 1 ? year - 1 : year;
+
+        fullArray.push({
+            day: day,
+            date: date,
+            month: mnth,
+            year: yr,
+        });
+    }
+
+
     return fullArray;
 };
 
