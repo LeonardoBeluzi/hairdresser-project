@@ -40,10 +40,14 @@ const fullMonth = (month: number, year: number, firstDayOfTheWeek: WeekFirstDay)
         ...viewYear,
         month: nameOfMonth,
     };
+    
 
     const firstWeekDayInMonth = dayOfWeek({ ...viewMonth, day: 1 });
+    const countDaysInViewMonth = numberOfDaysInMonth(viewMonth);
     const countDaysInPrevMonth = numberOfDaysInMonth({ year: month === 1 ? year - 1 : year, month: monthName(month - 1) });
     const daysOfPrevMonth = weekDays[firstDayOfTheWeek].short.indexOf(firstWeekDayInMonth);
+
+    let dPrev = daysOfPrevMonth;
 
     for (let i = 0; i < daysOfPrevMonth; i += 1) {
         const date = countDaysInPrevMonth + (i + 1) - daysOfPrevMonth;
@@ -59,6 +63,23 @@ const fullMonth = (month: number, year: number, firstDayOfTheWeek: WeekFirstDay)
         });
     }
 
+    for (let i = 0; i < countDaysInViewMonth; i += 1) {
+        const date = i + 1;
+        const day = weekDays[firstDayOfTheWeek].short[dPrev]
+        const mnth = monthName(month);
+        const yr = year;
+
+        dPrev = dPrev > 5 ? 0 : dPrev + 1;
+
+        fullArray.push({
+            day: day,
+            date: date,
+            month: mnth,
+            year: yr,
+        });
+    }
+
+    
 
     return fullArray;
 };
