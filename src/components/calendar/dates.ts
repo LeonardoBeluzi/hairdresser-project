@@ -46,8 +46,11 @@ const fullMonth = (month: number, year: number, firstDayOfTheWeek: WeekFirstDay)
     const countDaysInViewMonth = numberOfDaysInMonth(viewMonth);
     const countDaysInPrevMonth = numberOfDaysInMonth({ year: month === 1 ? year - 1 : year, month: monthName(month - 1) });
     const daysOfPrevMonth = weekDays[firstDayOfTheWeek].short.indexOf(firstWeekDayInMonth);
+    const daysOfNextMonth = totalDaysInMonthGrid - (daysOfPrevMonth + countDaysInViewMonth);
 
     let dPrev = daysOfPrevMonth;
+
+    let dNext = daysOfNextMonth < 8 ? 7 - daysOfNextMonth : 14 - daysOfNextMonth;
 
     for (let i = 0; i < daysOfPrevMonth; i += 1) {
         const date = countDaysInPrevMonth + (i + 1) - daysOfPrevMonth;
@@ -79,7 +82,22 @@ const fullMonth = (month: number, year: number, firstDayOfTheWeek: WeekFirstDay)
         });
     }
 
-    
+    for (let i = 0; i < daysOfNextMonth; i += 1) {
+        const date = i + 1;
+        const day = weekDays[firstDayOfTheWeek].short[dNext];
+        const mnth = monthName(month + 1)
+        const yr = month === 12 ? year + 1 : year;
+        
+        dNext = dNext > 5 ? 0 : dNext + 1;
+
+        fullArray.push({
+            day: day,
+            date: date,
+            month: mnth,
+            year: yr,
+        });
+        
+    }
 
     return fullArray;
 };
